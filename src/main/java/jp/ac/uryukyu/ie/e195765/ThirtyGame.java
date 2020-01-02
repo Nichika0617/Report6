@@ -19,7 +19,7 @@ public class ThirtyGame {
         this.count = count;
     }
 
-    public void ThirtyGame(int saynumber){
+    public void ThirtyGame(int SayNumber){
 
         }
     }
