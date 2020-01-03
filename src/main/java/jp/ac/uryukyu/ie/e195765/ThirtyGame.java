@@ -10,7 +10,7 @@ public class ThirtyGame {
 
     }
 
-    private int count=0;
+    private int count = 0;
     public int getCount(){
         return count;
     }
@@ -37,10 +37,45 @@ public class ThirtyGame {
             e.printStackTrace();
         }
     }
+    public void ThirtyGame(String name,int AnsOrder){
+        if (AnsOrder== 1) {
+            System.out.println("分かった！" + name + "さんが先攻だね！1~3の数字を言って始めてね！");
+            while (true) {
+                PrayerAction act1 = new PrayerAction();
+                setCount(act1.PrayerAction(getCount()));
+                if (getCount() >= 30) {
+                    act1.judge(getName());
+                     break;
+                }
+                ComputerAction act2 = new ComputerAction(getCount());
+                setCount(act2.ComputerAction(getCount()));
+                if (getCount() >= 30){
+                    act2.judge(name);
+                    break;
+            }
+            }
+        } else if (AnsOrder == 2) {
+            System.out.println("分かった！私から始めるよ！！");
+            while (true) {
+                ComputerAction act2 = new ComputerAction(getCount());
+                setCount(act2.ComputerAction(getCount()));
+                if (getCount() >= 30) {
+                    act2.judge(getName());
+                    break;
+                }
+                PrayerAction act1 = new PrayerAction();
+                setCount(act1.PrayerAction(getCount()));
+                if (getCount() >= 30) {
+                    act1.judge(getName());
+                    break;
+                }
+            }
 
-    public void judge(String name,int count){
+        }
+    }
+    public void judge(String name){
         if(count >= 30){
-            System.out.println("終わり！！");
+            System.out.println("終了！！");
         }
 
         }

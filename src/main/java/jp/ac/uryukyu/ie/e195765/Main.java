@@ -21,10 +21,14 @@ public class Main{
         game.waitMoment(3000);
 
         Order order = new Order();
-        order.settingName();
-        order.DecideOrder();
-
+        String name = order.settingName();
+        int AnsNumber = order.DecideOrder();
+        if (AnsNumber == 1){
+            game.ThirtyGame(name,AnsNumber);
+        }else if(AnsNumber == 2){
+            game.ThirtyGame(name,AnsNumber);
         }
+    }
 }
 
 
