@@ -3,6 +3,10 @@ package jp.ac.uryukyu.ie.e195765;
 import java.util.Scanner;
 
 public class Order extends ThirtyGame {
+    /**
+     * プレイヤーの名前を入力してもらい、設定するメソッド
+     * @return String name プレイヤー名
+     */
     public String settingName(){
         waitMoment(2000);
         System.out.println("あっ...説明に夢中でまだ名前を聞いてなかったね！");
@@ -13,6 +17,11 @@ public class Order extends ThirtyGame {
         System.out.println(name + "さんだね！対戦よろしく！");
         return name;
     }
+
+    /**
+     * 先攻か後攻かをプレイヤーに決めてもらうためのメソッド
+     * @return 1(先攻)か2(後攻)
+     */
     public int DecideOrder() {
         waitMoment(2000);
         System.out.println("じゃあゲームを始めるよ！先攻、後攻どっちにする？1か2で答えてね！\n1→先攻\n2→後攻");

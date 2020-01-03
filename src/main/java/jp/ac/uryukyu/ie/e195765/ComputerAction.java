@@ -6,13 +6,19 @@ public class ComputerAction extends ThirtyGame{
     public ComputerAction(int count){
         super.setCount(count);
     }
+
+    /**
+     * コンピューター行動
+     * @param count お互い言い合っている途中の現在の数字
+     * @return コンピューターが返答した数字
+     */
     public int ComputerAction(int count){
         if(count >= 30){
             //何もしない
             return 30;
         }else{
-            int[] NumberList = {count+1,count+2,count+3};
-            if(count+1 == 29 || count+2 == 29 || count+3 == 29){
+            int[] NumberList = {count+1,count+2,count+3}; //発現可能な3つの数字を配列に入れる
+            if(count+1 == 29 || count+2 == 29 || count+3 == 29){//もし発現可能な数字の中に29が合ったら29を返す。(勝ちに行く)
                 System.out.println("お！！これは・・！");
                 waitMoment(2000);
                 System.out.println(29);
@@ -20,7 +26,7 @@ public class ComputerAction extends ThirtyGame{
             }
             Random random = new Random();
             int ListLength = NumberList.length;
-            int SayNumber = NumberList[random.nextInt(ListLength)];
+            int SayNumber = NumberList[random.nextInt(ListLength)]; //0以上3未満の0,1,2の中からランダムで返し、その番号に対応した配列の値を返す。
             waitMoment(2000);
             System.out.println(SayNumber);
             return SayNumber;

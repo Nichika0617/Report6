@@ -20,8 +20,8 @@ public class Main{
         System.out.println("この場合、Bさんの負けだね！だいたい分かったかな？");
         game.waitMoment(3000);
 
-        Order order = new Order();
-        String name = order.settingName();
+        Order order = new Order(); //先攻か後攻か決める
+        String name = order.settingName();//プレイヤー名を入力してもらう
         int AnsNumber = order.DecideOrder();
         if (AnsNumber == 1){
             game.ThirtyGame(name,AnsNumber);
