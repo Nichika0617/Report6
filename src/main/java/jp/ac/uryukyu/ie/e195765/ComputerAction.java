@@ -23,6 +23,10 @@ public class ComputerAction extends ThirtyGame{
                 waitMoment(2000);
                 System.out.println(29);
                 return 29;
+            }if(count+1 == 30 ){//もし次が30だった場合(30を言って負ける。それ以上に進まない)
+                waitMoment(2000);
+                System.out.println(30);
+                return 30;
             }
             Random random = new Random();
             int ListLength = NumberList.length;

@@ -9,7 +9,7 @@ public class Order extends ThirtyGame {
      */
     public String settingName(){
         waitMoment(2000);
-        System.out.println("あっ...説明に夢中でまだ名前を聞いてなかったね！");
+        System.out.println("あっ...まだ名前を聞いてなかったね！");
         System.out.println("ゲームを始める前にプレイヤーの名前を教えてね！\n(入力待ち)");
         Scanner scan = new Scanner(System.in);
         String name = scan.next();
