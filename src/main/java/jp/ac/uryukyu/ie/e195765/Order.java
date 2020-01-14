@@ -47,4 +47,3 @@ public class Order extends ThirtyGame {
         }
     }
 }
-

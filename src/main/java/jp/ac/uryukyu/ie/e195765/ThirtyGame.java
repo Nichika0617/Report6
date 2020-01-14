@@ -1,7 +1,7 @@
 package jp.ac.uryukyu.ie.e195765;
 
 public class ThirtyGame {
-    public String name;
+    private String name;
 
     /**
      * プレイヤーの名前を受け取るためのメソッド
@@ -96,13 +96,13 @@ public class ThirtyGame {
                 ComputerAction act2 = new ComputerAction(getCount());
                 setCount(act2.ComputerAction(getCount()));
                 if (getCount() >= 30) {
-                    act2.judge(getName());
+                    act2.judge(name);
                     break;
                 }
                 PrayerAction act1 = new PrayerAction();
                 setCount(act1.PrayerAction(getCount()));
                 if (getCount() >= 30) {
-                    act1.judge(getName());
+                    act1.judge(name);
                     break;
                 }
             }

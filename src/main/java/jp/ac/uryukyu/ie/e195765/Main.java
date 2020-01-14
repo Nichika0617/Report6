@@ -16,6 +16,8 @@ public class Main{
         try {
             int number = Integer.parseInt(str);
             if (number == 1) {
+                System.out.println("分かった！ルールの説明をするね！");
+                game.waitMoment(2000);
                 System.out.println("2人のうち、どちらかが先攻、どちらかが後攻となって1~30まで交互に数字を数え、先に30を言った方が負け！\n簡単なゲームだよ！");
                 game.waitMoment(4000);
 
@@ -48,5 +50,3 @@ public class Main{
         }
     }
 }
-
-
