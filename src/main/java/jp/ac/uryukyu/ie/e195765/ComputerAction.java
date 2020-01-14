@@ -38,7 +38,7 @@ public class ComputerAction extends ThirtyGame{
     }
 
     @Override
-    public void judge(String name){
+    public void judge(String name){ //コンピューターのターンで終わった場合、プレイヤーの勝ち。
         System.out.println("負けた！！");
             waitMoment(2000);
             System.out.println(name+"さん、強いね！！\nありがとう！また遊ぼうね！");

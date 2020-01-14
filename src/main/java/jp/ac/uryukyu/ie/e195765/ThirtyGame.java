@@ -73,25 +73,19 @@ public class ThirtyGame {
      * @param name プレイヤー名
      * @param AnsOrder プレイヤーが選択した先攻か後攻かを決める数字
      */
-    public void ThirtyGame(String name,int AnsOrder){
+    public void ThirtyGame(String name,int AnsOrder,int AnsMode){
         if (AnsOrder== 1) {
-            System.out.println("分かった！" + name + "さんが先攻だね！1~3の数字を言って始めてね！");
-            while (true) {
-                PrayerAction act1 = new PrayerAction();
-                setCount(act1.PrayerAction(getCount()));
-                if (getCount() >= 30) {
-                    act1.judge(getName());
-                     break;
-                }
-                ComputerAction act2 = new ComputerAction(getCount());
-                setCount(act2.ComputerAction(getCount()));
-                if (getCount() >= 30){
-                    act2.judge(name);
-                    break;
-            }
-            }
-        } else if (AnsOrder == 2) {
-            System.out.println("分かった！私から始めるよ！！");
+            PlayerFirst(name,AnsMode);
+        }else if (AnsOrder == 2){
+            CPUFirst(name,AnsMode);
+        }
+    }
+
+    public void CPUFirst(String name ,int AnsMode){ //プレイヤーが後攻の場合
+        System.out.println("やった！！先攻だ！！");
+        waitMoment(1000);
+        System.out.println("私から始めるよ！！");
+        if(AnsMode == 1){ //ノーマルモード
             while (true) {
                 ComputerAction act2 = new ComputerAction(getCount());
                 setCount(act2.ComputerAction(getCount()));
@@ -107,6 +101,59 @@ public class ThirtyGame {
                 }
             }
 
+    }else if (AnsMode == 2) {  //ハードモード
+            while (true) {
+                HardMode act2 = new HardMode(getCount());
+                setCount(act2.HardMode(getCount()));
+                if (getCount() >= 30) {
+                    act2.judge(name);
+                    break;
+                }
+                PrayerAction act1 = new PrayerAction();
+                setCount(act1.PrayerAction(getCount()));
+                if (getCount() >= 30) {
+                    act1.judge(name);
+                    break;
+                }
+            }
+
+        }
+}
+
+public void PlayerFirst(String name ,int AnsMode){ //プレイヤーが先攻の場合
+        System.out.println("後攻か・・頑張ろ！！");
+        waitMoment(1000);
+        System.out.println( name + "さんが先攻だね！1~3の数字を言って始めてね！");
+        if(AnsMode == 1){//ノーマルモード
+        while (true) {
+        PrayerAction act1 = new PrayerAction();
+        setCount(act1.PrayerAction(getCount()));
+        if (getCount() >= 30) {
+            act1.judge(name);
+                break;
+        }
+        ComputerAction act2 = new ComputerAction(getCount());
+        setCount(act2.ComputerAction(getCount()));
+        if (getCount() >= 30) {
+            act2.judge(name);
+            break;
+        }
+}
+        }else if (AnsMode == 2){//ハードモード
+            while (true) {
+                PrayerAction act1 = new PrayerAction();
+                setCount(act1.PrayerAction(getCount()));
+                if (getCount() >= 30) {
+                    act1.judge(name);
+                    break;
+                }
+                HardMode act2 = new HardMode(getCount());
+                setCount(act2.HardMode(getCount()));
+                if (getCount() >= 30) {
+                    act2.judge(name);
+                    break;
+                }
+        }
         }
     }
 

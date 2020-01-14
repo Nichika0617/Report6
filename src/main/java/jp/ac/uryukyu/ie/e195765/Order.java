@@ -23,7 +23,7 @@ public class Order extends ThirtyGame {
      * @return 1(先攻)か2(後攻)
      */
     public int DecideOrder() {
-        waitMoment(2000);
+        waitMoment(1000);
         System.out.println("じゃあゲームを始めるよ！先攻、後攻どっちにする？1か2で答えてね！\n1→先攻\n2→後攻");
         while (true) {
             Scanner scanner = new Scanner(System.in);
@@ -45,5 +45,35 @@ public class Order extends ThirtyGame {
                 return 2;
             }
         }
+    }
+    public int DecideMode(){
+        waitMoment(2000);
+        System.out.println("難易度はどうする？1か2で答えてね！\n1→ノーマル\n2→ハード(最強)");
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            String str = scanner.nextLine();
+            try {
+                int number = Integer.parseInt(str);
+                setSelectedNumber(number);
+                if (getSelectedNumber() <= 2) {
+                    //何もせず次に進む
+                } else {
+                    System.out.println("1か2で答えてね！");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("数字で答えてね！");
+            }
+            if (getSelectedNumber() == 1) {
+                System.out.println("のんびり楽しもうね！");
+                return 1;
+            } else if (getSelectedNumber() == 2) {
+                System.out.println("本気でいいの！？");
+                waitMoment(2000);
+                System.out.println("いざ、勝負！！");
+                return 2;
+            }
+        }
+
+
     }
 }

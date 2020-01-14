@@ -5,7 +5,7 @@ public class Main{
     public static void main(String[] args) {
         ThirtyGame game = new ThirtyGame();
         System.out.println("来てくれてありがとう！");
-        System.out.println("30いったら負けゲーム...って知ってる？");
+        System.out.println("30いったら負けゲーム・・・って知ってる？");
         game.waitMoment(2000);
         System.out.println("_____________________________"+"\nまずルールの説明をするよ！");
         game.waitMoment(2000);
@@ -42,11 +42,8 @@ public class Main{
 
         Order order = new Order(); //先攻か後攻か決める
         String name = order.settingName();//プレイヤー名を入力してもらう
+        int modeNumber = order.DecideMode();
         int AnsNumber = order.DecideOrder();
-        if (AnsNumber == 1){
-            game.ThirtyGame(name,AnsNumber);
-        }else if(AnsNumber == 2){
-            game.ThirtyGame(name,AnsNumber);
+        game.ThirtyGame(name,AnsNumber,modeNumber);
         }
     }
-}

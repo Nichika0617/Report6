@@ -46,7 +46,7 @@ public class PrayerAction extends ThirtyGame {
     }
 
     @Override
-    public void judge(String name){
+    public void judge(String name){ //プレイヤーのターンで終わった場合はコンピューターの勝ち。
             System.out.println("私の勝ち！！");
             waitMoment(2000);
             System.out.println("楽しかった！また遊ぼうね！\nいつでも相手するよ！");
