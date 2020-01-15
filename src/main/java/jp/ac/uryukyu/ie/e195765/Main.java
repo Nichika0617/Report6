@@ -32,10 +32,10 @@ public class Main{
                 System.out.println("分かった！すぐにゲームを始めるね！");
                 break;
             }else{
-                System.out.println("1か2で答えてね！");
+                System.out.println("*1か2で答えてね！");
             }
         } catch (NumberFormatException e) {
-            System.out.println("数字で答えてね！");
+            System.out.println("*数字で答えてね！");
         }
         }
 

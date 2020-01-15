@@ -34,10 +34,10 @@ public class Order extends ThirtyGame {
                 if (getSelectedNumber() <= 2) {
                     //何もせず次に進む
                 } else {
-                    System.out.println("1か2で答えてね！");
+                    System.out.println("*1か2で答えてね！");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("数字で答えてね！");
+                System.out.println("*数字で答えてね！");
             }
             if (getSelectedNumber() == 1) {
                 return 1;
@@ -58,13 +58,13 @@ public class Order extends ThirtyGame {
                 if (getSelectedNumber() <= 2) {
                     //何もせず次に進む
                 } else {
-                    System.out.println("1か2で答えてね！");
+                    System.out.println("*1か2で答えてね！");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("数字で答えてね！");
+                System.out.println("*数字で答えてね！");
             }
             if (getSelectedNumber() == 1) {
-                System.out.println("のんびり楽しもうね！");
+                System.out.println("*のんびり楽しもうね！");
                 return 1;
             } else if (getSelectedNumber() == 2) {
                 System.out.println("本気でいいの！？");

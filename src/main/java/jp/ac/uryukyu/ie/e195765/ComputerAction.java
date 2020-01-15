@@ -24,6 +24,7 @@ public class ComputerAction extends ThirtyGame{
                 System.out.println(29);
                 return 29;
             }if(count+1 == 30 ){//もし次が30だった場合(30を言って負ける。それ以上に進まない)
+                System.out.println("んーーーー・・・");
                 waitMoment(2000);
                 System.out.println(30);
                 return 30;
@@ -31,6 +32,8 @@ public class ComputerAction extends ThirtyGame{
             Random random = new Random();
             int ListLength = NumberList.length;
             int SayNumber = NumberList[random.nextInt(ListLength)]; //0以上3未満の0,1,2の中からランダムで返し、その番号に対応した配列の値を返す。
+            String [] wordList = {"ドキドキ・・","わくわく・・","えっと・・・"};
+            System.out.println(wordList[random.nextInt(wordList.length)]);
             waitMoment(2000);
             System.out.println(SayNumber);
             return SayNumber;

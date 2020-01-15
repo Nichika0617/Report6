@@ -19,10 +19,10 @@ public class PrayerAction extends ThirtyGame {
                     if (number == 30){
                         return 30;
                     }else{
-                        System.out.println("30しか言えないよ！");
+                        System.out.println("*30しか言えないよ！");
                     }
                 }catch (NullPointerException e){
-                    System.out.println("数字で答えてね！");
+                    System.out.println("*数字で答えてね！");
                 }
 
             }else{
@@ -36,10 +36,10 @@ public class PrayerAction extends ThirtyGame {
                     int AbleNumber2 = count+2;
                     int AbleNumber3 = count+3;
 
-                    System.out.println(AbleNumber1+","+AbleNumber2+","+AbleNumber3+"のどれかしか言えないよ！");//想定外の数字を入力された場合、入力可能な3つの数字を教える。
+                    System.out.println("*"+AbleNumber1+","+AbleNumber2+","+AbleNumber3+"のどれかしか言えないよ！");//想定外の数字を入力された場合、入力可能な3つの数字を教える。
                 }
             } catch (NumberFormatException e) {
-                System.out.println("数字で答えてね！");
+                System.out.println("*数字で答えてね！");
             }
             }
         }

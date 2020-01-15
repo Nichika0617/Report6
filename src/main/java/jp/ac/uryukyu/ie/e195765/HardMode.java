@@ -32,6 +32,9 @@ public class HardMode extends ThirtyGame{
                 System.out.println(ReturnAbleNumber3);
                 return ReturnAbleNumber3;
             }else {
+                Random random = new Random();
+                String [] wordList = {"ふむふむ・・","なるほど・・","えっと・・・"};
+                System.out.println(wordList[random.nextInt(wordList.length)]);
                 System.out.println(ReturnAbleNumber1);
                 return ReturnAbleNumber1;
             }
