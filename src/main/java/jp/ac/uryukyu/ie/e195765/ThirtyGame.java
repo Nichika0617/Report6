@@ -69,9 +69,10 @@ public class ThirtyGame {
     }
 
     /**
-     * ゲームを流すメソッド
-     * @param name プレイヤー名
-     * @param AnsOrder プレイヤーが選択した先攻か後攻かを決める数字
+     * ゲームを進行するメソッド
+     * @param name プレイヤーの名前
+     * @param AnsOrder プレイヤーが先攻か後攻かの質問に答えた数字。 1(先攻)か2(後攻)
+     * @param AnsMode プレイヤーが難易度選択の時に答えた数字 1(ノーマルモード)か2(ハードモード)
      */
     public void ThirtyGame(String name,int AnsOrder,int AnsMode){
         if (AnsOrder== 1) {
@@ -81,6 +82,11 @@ public class ThirtyGame {
         }
     }
 
+    /**
+     * プレイヤーが後攻(CPUが先攻)の時のゲームを進行するメソッド
+     * @param name プレイヤー名
+     * @param AnsMode プレイヤーが難易度選択の時に答えた数字 1(ノーマルモード)か2(ハードモード)
+     */
     public void CPUFirst(String name ,int AnsMode){ //プレイヤーが後攻の場合
         System.out.println("やった！！先攻だ！！");
         waitMoment(1000);
@@ -120,7 +126,12 @@ public class ThirtyGame {
         }
 }
 
-public void PlayerFirst(String name ,int AnsMode){ //プレイヤーが先攻の場合
+    /**
+     * プレイヤーが先攻(CPUが後攻)の時のゲームを進行するメソッド
+     * @param name プレイヤー名
+     * @param AnsMode プレイヤーが難易度選択の時に答えた数字 1(ノーマルモード)か2(ハードモード)
+     */
+    public void PlayerFirst(String name ,int AnsMode){ //プレイヤーが先攻の場合
         System.out.println("後攻か・・頑張ろ！！");
         waitMoment(1000);
         System.out.println( name + "さんが先攻だね！1~3の数字を言って始めてね！");

@@ -42,6 +42,10 @@ public class HardMode extends ThirtyGame{
             }
     }
 
+    /**
+     * 負けたときに負けのセリフを出力するメソッド
+     * @param name プレイヤー名
+     */
     @Override
     public void judge(String name){ // コンピューターのターンで終わった場合、プレイヤーの勝ち
         System.out.println("負けた・・・");

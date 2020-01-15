@@ -46,6 +46,11 @@ public class Order extends ThirtyGame {
             }
         }
     }
+
+    /**
+     * 対戦の難易度を決めてもらうためのメソッド
+     * @return 1(ノーマルモード) 2(ハードモード)
+     */
     public int DecideMode(){
         waitMoment(2000);
         System.out.println("難易度はどうする？1か2で答えてね！\n1→ノーマル\n2→ハード(最強)");

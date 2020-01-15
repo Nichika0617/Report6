@@ -8,7 +8,7 @@ public class ComputerAction extends ThirtyGame{
     }
 
     /**
-     * コンピューター行動
+     * コンピューターの行動
      * @param count お互い言い合っている途中の現在の数字
      * @return コンピューターが返答した数字
      */
@@ -40,6 +40,10 @@ public class ComputerAction extends ThirtyGame{
         }
     }
 
+    /**
+     * 負けたときに負けのセリフを出力するメソッド
+     * @param name プレイヤー名
+     */
     @Override
     public void judge(String name){ //コンピューターのターンで終わった場合、プレイヤーの勝ち。
         System.out.println("負けた！！");

@@ -45,6 +45,10 @@ public class PrayerAction extends ThirtyGame {
         }
     }
 
+    /**
+     * プレイヤーが30を言ったとき、CPUが勝ちのセリフを出力するメソッド
+     * @param name プレイヤー名
+     */
     @Override
     public void judge(String name){ //プレイヤーのターンで終わった場合はコンピューターの勝ち。
             System.out.println("私の勝ち！！");

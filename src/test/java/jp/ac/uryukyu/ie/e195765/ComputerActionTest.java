@@ -15,7 +15,7 @@ class ComputerActionTest {
         ComputerAction cpu27 = new ComputerAction(27);
         assertEquals(29,cpu27.ComputerAction(27));//27で回って来た時
         ComputerAction cpu28 = new ComputerAction(28);
-        assertEquals(29,cpu28.ComputerAction(28));//28で回って来た時ComputerAction cpu26 = new ComputerAction(26);
+        assertEquals(29,cpu28.ComputerAction(28));//28で回って来た時
         //乱数で奇跡的に29を返答している可能性もあるので、複数回実行する。
         assertEquals(29,cpu26.ComputerAction(26));
         assertEquals(29,cpu27.ComputerAction(27));
