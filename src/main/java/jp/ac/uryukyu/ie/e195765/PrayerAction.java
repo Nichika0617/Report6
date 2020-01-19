@@ -27,20 +27,20 @@ public class PrayerAction extends ThirtyGame {
 
             }else{
                 try {
-                int number = Integer.parseInt(str);
-                if (number - count <= 3 && number > count) { // 現在の数字<プレイヤーが発言可能な数字<=現在の数字+3
-                    return number;
-                }
-                else {
-                    int AbleNumber1 = count+1;//現在の数字に1、2、3を足した、プレイヤーが発言可能な数字を保存しておく
-                    int AbleNumber2 = count+2;
-                    int AbleNumber3 = count+3;
+                    int number = Integer.parseInt(str);
+                    if (number - count <= 3 && number > count) { // 現在の数字<プレイヤーが発言可能な数字<=現在の数字+3
+                        return number;
+                    }
+                    else {
+                        int AbleNumber1 = count+1;//現在の数字に1、2、3を足した、プレイヤーが発言可能な数字を保存しておく
+                        int AbleNumber2 = count+2;
+                        int AbleNumber3 = count+3;
 
-                    System.out.println("*"+AbleNumber1+","+AbleNumber2+","+AbleNumber3+"のどれかしか言えないよ！");//想定外の数字を入力された場合、入力可能な3つの数字を教える。
+                        System.out.println("*"+AbleNumber1+","+AbleNumber2+","+AbleNumber3+"のどれかしか言えないよ！");//想定外の数字を入力された場合、入力可能な3つの数字を教える。
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("*数字で答えてね！");
                 }
-            } catch (NumberFormatException e) {
-                System.out.println("*数字で答えてね！");
-            }
             }
         }
     }
