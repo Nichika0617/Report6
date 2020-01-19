@@ -21,8 +21,7 @@ class ComputerActionTest {
         assertEquals(29,cpu27.ComputerAction(27));
         assertEquals(29,cpu28.ComputerAction(28));
 
-
-    }
+            }
 
     /**
      * 返答可能な最小の数字が30の場合、31や32は返さずに30を返して負けているかを確認するテスト

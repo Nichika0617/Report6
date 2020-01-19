@@ -8,7 +8,7 @@ public class ComputerAction extends ThirtyGame{
     }
 
     /**
-     * コンピューターの行動
+     * ノーマルモードのCPUの行動
      * @param count お互い言い合っている途中の現在の数字
      * @return コンピューターが返答した数字
      */

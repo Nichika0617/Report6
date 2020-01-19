@@ -9,7 +9,7 @@ public class HardMode extends ThirtyGame{
     }
 
     /**
-     * コンピューター行動
+     * ハードモードのCPUの行動
      * @param count お互い言い合っている途中の現在の数字
      * @return コンピューターが返答した数字
      */
@@ -22,7 +22,7 @@ public class HardMode extends ThirtyGame{
             int ReturnAbleNumber1 = NumberList[0];
             int ReturnAbleNumber2 = NumberList[1];
             int ReturnAbleNumber3 = NumberList[2];
-            if(ReturnAbleNumber1 % 4 == 1){
+            if(ReturnAbleNumber1 % 4 == 1){ //勝つための数字を出力する。4で割ってあまりが1の数字。
                 System.out.println(ReturnAbleNumber1);
                 return ReturnAbleNumber1;
                 }else if(ReturnAbleNumber2 % 4 == 1){
@@ -31,7 +31,7 @@ public class HardMode extends ThirtyGame{
                 }else if (ReturnAbleNumber3 % 4 == 1){
                 System.out.println(ReturnAbleNumber3);
                 return ReturnAbleNumber3;
-            }else {
+            }else { //発言回数が多くなるように、1だけ進めたものを返す。
                 Random random = new Random();
                 String [] wordList = {"ふむふむ・・","なるほど・・","えっと・・・"};
                 System.out.println(wordList[random.nextInt(wordList.length)]);
@@ -54,5 +54,3 @@ public class HardMode extends ThirtyGame{
         System.out.println(name+"さん、強いね！！\nありがとう！また遊ぼうね！");
     }
 }
-
-

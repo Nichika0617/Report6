@@ -75,10 +75,10 @@ public class Order extends ThirtyGame {
                 System.out.println("本気でいいの！？");
                 waitMoment(2000);
                 System.out.println("いざ、勝負！！");
+                waitMoment(1000);
                 return 2;
             }
         }
-
 
     }
 }
